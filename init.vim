@@ -8,6 +8,7 @@ set encoding=utf-8
 set showmatch
 set hidden
 set termguicolors
+set cursorline
 syntax enable
 
 so $HOME/.config/nvim/plugs.vim
