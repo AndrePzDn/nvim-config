@@ -31,7 +31,3 @@ so $HOME/.config/nvim/plug-config/treesitter.lua
 
 " Color Scheme Config / Gruvbox 
 colorscheme gruvbox
-
-autocmd VimEnter * TSEnable highlight
-
-let g:airline_theme="bubblegum"
