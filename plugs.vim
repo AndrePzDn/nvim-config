@@ -68,5 +68,8 @@ Plug 'norcalli/nvim-colorizer.lua'
 " Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
+" Highlight Chunk
+Plug 'shellRaining/hlchunk.nvim'
+
 call plug#end()
 
