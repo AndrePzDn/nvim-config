@@ -71,5 +71,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 " Highlight Chunk
 Plug 'shellRaining/hlchunk.nvim'
 
+" File Browser
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+
 call plug#end()
 

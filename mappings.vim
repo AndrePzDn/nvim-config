@@ -35,3 +35,6 @@ let g:copilot_no_tab_map = v:true
 " nmap <C-b> :NERDTreeToggle<CR>
 " imap <C-b> <Esc><C-b>
 
+" File Browser Telescope Shortcuts
+nmap <C-b> :Telescope file_browser<CR><Esc>
+imap <C-b> <Esc><C-b>
