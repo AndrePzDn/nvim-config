@@ -7,7 +7,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'akinsho/toggleterm.nvim' , {'tag': '*'}
 
 " Coc Plugin (Conquer of completion)
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'} " coc
+" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'} " coc
 
 " Airline Plugins
 Plug 'vim-airline/vim-airline' " Airline for commands
@@ -17,7 +17,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim' , { 'tag': '0.1.5' }
 Plug 'nvim-lua/popup.nvim'
-Plug 'https://github.com/nvim-telescope/telescope-media-files.nvim'
+Plug 'nvim-telescope/telescope-media-files.nvim'
 
 " Themes / colorschemas
 Plug 'olimorris/onedarkpro.nvim' "One Dark Pro Color Scheme
@@ -46,9 +46,16 @@ Plug 'KarimElghamry/vim-auto-comment'
 " Highlighter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" LSP Plugins
-" Plug 'https://github.com/prabirshrestha/vim-lsp' " LSP (Language Server Support)
-" Plug 'https://github.com/mattn/vim-lsp-settings' " LSP Settings auto install servers
+" Native LSP
+Plug 'neovim/nvim-lspconfig'
+
+" LSP Autocompletion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 " Starting Page
 Plug 'mhinz/vim-startify'
@@ -73,6 +80,11 @@ Plug 'shellRaining/hlchunk.nvim'
 
 " File Browser
 Plug 'nvim-telescope/telescope-file-browser.nvim'
+
+" Tmux Navigator
+Plug 'christoomey/vim-tmux-navigator'
+
+Plug 'windwp/nvim-ts-autotag'
 
 call plug#end()
 

@@ -14,24 +14,4 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeChDirMode = 2
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ "Modified"  : "✱",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✗",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✱",
-    \ "Clean"     : "✔",
-    \ "Ignored"   : "☒",
-    \ }
-
-let g:webdevicons_enable_nerdtree_maps = 1
-let g:webdevicons_nerdtree_maps = {
- \ 'Icon' : '',
- \ 'OpenedFile' : '',
- \ 'OpenedFolder' : '',
- \ 'EmptyFolder' : '',
- \ 'Symlink' : ''
- \}
-let g:NERDTreeShowDevIcons = 1
+let g:NERDTreeIgnore = ['^node_modules$']

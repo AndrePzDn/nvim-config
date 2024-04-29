@@ -2,6 +2,7 @@ set number
 set rnu
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set expandtab
 set showcmd
 set encoding=utf-8
@@ -9,16 +10,19 @@ set showmatch
 set hidden
 set termguicolors
 set cursorline
+set clipboard=unnamedplus
+set textwidth=80
+set colorcolumn=80
 syntax enable
 
 so $HOME/.config/nvim/plugs.vim
-so $HOME/.config/nvim/mappings.vim
+so $HOME/.config/nvim/mappings.lua
 so $HOME/.config/nvim/plug-config/airline.vim
 so $HOME/.config/nvim/plug-config/auto-comment.vim
-so $HOME/.config/nvim/plug-config/coc.vim
 so $HOME/.config/nvim/plug-config/colorizer.lua
 so $HOME/.config/nvim/plug-config/devicons.lua
 so $HOME/.config/nvim/plug-config/hlchunck.lua
+so $HOME/.config/nvim/plug-config/lsp.lua
 so $HOME/.config/nvim/plug-config/nerd-tree.vim
 so $HOME/.config/nvim/plug-config/notify-conf.vim
 so $HOME/.config/nvim/plug-config/notify.lua
@@ -30,4 +34,11 @@ so $HOME/.config/nvim/plug-config/transparent.lua
 so $HOME/.config/nvim/plug-config/treesitter.lua
 
 " Color Scheme Config / Gruvbox 
-colorscheme gruvbox
+colorscheme onedark_vivid
+
+hi CursorLine guibg=#272C31 guifg=NONE
+hi StartifyHeader guifg=#C678DD
+" hi Visual guifg=NONE guibg=DarkMagenta gui=none
+hi Visual guifg=#FFFFFF guibg=none gui=underline
+hi Search guifg=none guibg=none gui=underdouble
+hi MatchParen guifg=none guibg=none gui=underdouble
