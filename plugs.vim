@@ -34,9 +34,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'MunifTanjim/nui.nvim'        " it's a dependency
 Plug 'xeluxee/competitest.nvim'
 
-" Ident Line
-Plug 'lukas-reineke/indent-blankline.nvim'
-
 " Notifications
 Plug 'rcarriga/nvim-notify'
 
@@ -84,6 +81,7 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 " Tmux Navigator
 Plug 'christoomey/vim-tmux-navigator'
 
+" AutoTag
 Plug 'windwp/nvim-ts-autotag'
 
 call plug#end()
