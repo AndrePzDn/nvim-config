@@ -1,4 +1,4 @@
--- vim.diagnostic.config({ virtual_text = true })
+vim.diagnostic.config({ virtual_text = true })
 
 vim.o.updatetime = 50
 vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
@@ -19,7 +19,7 @@ local on_attach_lsp = function()
   vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, { buffer = 0 })
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { buffer = 0 })
   vim.keymap.set('n', 'gr', vim.lsp.buf.rename, { buffer = 0 })
-  vim.keymap.set('n', 'gf', vim.lsp.buf.code_action, { buffer = 0 })
+  vim.keymap.set('n', '<leader>f', vim.lsp.buf.code_action, { buffer = 0 })
   vim.keymap.set('n', '<leader>j', vim.diagnostic.goto_next, { buffer = 0 })
   vim.keymap.set('n', '<leader>k', vim.diagnostic.goto_prev, { buffer = 0 })
 end

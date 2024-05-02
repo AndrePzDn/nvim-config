@@ -1,5 +1,5 @@
 let g:inline_comment_dict = {
-		\'//': ["js", "ts", "cpp", "c", "dart", "java"],
+		\'//': ["js", "ts", "cpp", "c", "cs", "dart", "java"],
 		\'#': ['py', 'sh'],
 		\'"': ['vim'],
 		\';': ['asm'],
