@@ -20,7 +20,7 @@ require('telescope').setup{
       '--smart-case',
     },
     multi_icon = '+ ',
---         sorting_strategy = 'descending',
+--     sorting_strategy = 'descending',
     sorting_strategy = 'ascending',
     selection_strategy = 'follow',
     file_ignore_patterns = {'node_modules', '.git'},

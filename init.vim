@@ -1,8 +1,8 @@
 set number
-set rnu
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+" set rnu
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set showcmd
 set encoding=utf-8
@@ -22,9 +22,13 @@ so $HOME/.config/nvim/plug-config/auto-comment.vim
 so $HOME/.config/nvim/plug-config/cmp.lua
 so $HOME/.config/nvim/plug-config/colorizer.lua
 so $HOME/.config/nvim/plug-config/devicons.lua
+so $HOME/.config/nvim/plug-config/debugger.lua
+so $HOME/.config/nvim/plug-config/formatter.lua
+so $HOME/.config/nvim/plug-config/gitsigns.lua
 so $HOME/.config/nvim/plug-config/hlchunck.lua
+so $HOME/.config/nvim/plug-config/mason.lua
+so $HOME/.config/nvim/plug-config/linter.lua
 so $HOME/.config/nvim/plug-config/lsp.lua
-so $HOME/.config/nvim/plug-config/nerd-tree.vim
 so $HOME/.config/nvim/plug-config/notify-conf.vim
 so $HOME/.config/nvim/plug-config/notify.lua
 so $HOME/.config/nvim/plug-config/pcm.lua
@@ -34,12 +38,11 @@ so $HOME/.config/nvim/plug-config/toggleterm.lua
 so $HOME/.config/nvim/plug-config/transparent.lua
 so $HOME/.config/nvim/plug-config/treesitter.lua
 
-" Color Scheme Config / Gruvbox 
-colorscheme onedark_vivid
+" colorscheme onedark_vivid
+colorscheme gruvbox
 
 hi CursorLine guibg=#272C31 guifg=NONE
 hi StartifyHeader guifg=#C678DD
-" hi Visual guifg=NONE guibg=DarkMagenta gui=none
 hi Visual guifg=#FFFFFF guibg=none gui=underline
 hi Search guifg=none guibg=none gui=underdouble
 hi MatchParen guifg=none guibg=none gui=underdouble
