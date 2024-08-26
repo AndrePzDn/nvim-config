@@ -40,10 +40,10 @@ if ! command -v node &> /dev/null; then
     exit 1
 fi
 
-if ! command -v python &> /dev/null; then
-    echo "Python is not installed"
-    exit 1
-fi
+#if ! command -v python &> /dev/null; then
+#    echo "Python is not installed"
+#    exit 1
+#fi
 
 # Copy configuration to $HOME/.config/nvim
 
@@ -56,11 +56,9 @@ rm $HOME/.config/nvim/setup.sh
 # Install MasonPackages LSP, Linters and formatters
 
 nvim --headless +"MasonInstall clangd eslint-lsp gopls html-lsp jdtls typescript-language-server lua-language-server tailwindcss-language-server omnisharp" +qall
-
-nvim --headless +"MasonInstall markdownlint revive"
-
+nvim --headless +"MasonInstall markdownlint revive" +qall
 nvim --headless +"MasonInstall csharpier gofumpt markdownlint" +qall
 
 
-echo "Configuration installed"
-echo "You can remove this directory now"
+echo "\nConfiguration installed"
+echo "\nYou can remove this directory now"
