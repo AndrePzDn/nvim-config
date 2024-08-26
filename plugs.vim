@@ -19,6 +19,7 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
     " Themes / colorschemas
 Plug 'olimorris/onedarkpro.nvim' "One Dark Pro Color Scheme
 Plug 'morhetz/gruvbox'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
     " Plugins for NerdTree
 Plug 'ryanoasis/vim-devicons'

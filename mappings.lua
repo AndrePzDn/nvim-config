@@ -61,8 +61,8 @@ vim.keymap.set('v', '<C-/>', ':AutoInlineComment<CR>', {
 
 -- Competitive Programming Shortcuts
 
-vim.keymap.set('n', '<C-M-l>', ':CompiTest run_no_compile<CR>', {})
-vim.keymap.set('n', '<C-M-k>', ':CompiTest add_testcase<CR>', {})
+vim.keymap.set('n', '<C-M-l>', ':CompetiTest run<CR>', {})
+vim.keymap.set('n', '<C-M-k>', ':CompetiTest add_testcase<CR>', {})
 
 -- GitHub Copilot Shortcuts
 
@@ -77,7 +77,7 @@ vim.g.copilot_no_tab_map = true
 
 -- Git Shortcuts
 
-vim.keymap.set('n', '<leader>gg', ':Telescope git_status<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gg', ':Telescope git_status<CR><Esc>', { silent = true })
 
 -- LSP Shortcuts
 

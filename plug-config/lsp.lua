@@ -48,7 +48,7 @@ for _, lsp in ipairs(lspServers) do
 end
 
 lspconfig.omnisharp.setup{
-    cmd = {'OmniSharp'},
+    cmd = {'omnisharp'},
     settings = {
         FormattingOptions = {
             EnableEditorConfigSupport = true,

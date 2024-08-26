@@ -39,9 +39,10 @@ so $HOME/.config/nvim/plug-config/transparent.lua
 so $HOME/.config/nvim/plug-config/treesitter.lua
 
 " colorscheme onedark_vivid
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme catppuccin-macchiato
 
-hi CursorLine guibg=#272C31 guifg=NONE
+" hi CursorLine guibg=#272C31 guifg=NONE
 hi StartifyHeader guifg=#C678DD
 hi Visual guifg=#FFFFFF guibg=none gui=underline
 hi Search guifg=none guibg=none gui=underdouble

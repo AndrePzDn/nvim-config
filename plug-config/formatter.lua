@@ -5,6 +5,7 @@ conform.setup({
         markdown = { { "prettierd", "prettier" } },
         javascript = { { "prettierd", "prettier" } },
         csharp = { { "csharpier" } },
+        go = { { "gofmt" } },
     },
 })
 
