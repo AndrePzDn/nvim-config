@@ -6,8 +6,8 @@ Plug 'jiangmiao/auto-pairs' " AutoPair Plugin () [] {}
 Plug 'akinsho/toggleterm.nvim' , {'tag': '*'} " TogleTerm Plugin
 
     " Airline Plugins
-Plug 'vim-airline/vim-airline' " Airline for commands
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 
     " Telescopre Plugins
 Plug 'nvim-lua/plenary.nvim'

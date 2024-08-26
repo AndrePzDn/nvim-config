@@ -83,6 +83,13 @@ vim.keymap.set('n', '<leader>gg', ':Telescope git_status<CR><Esc>', { silent = t
 
 vim.keymap.set('n', '<leader>r', ':LspRestart<CR>', { noremap = true })
 
+-- Formatting Shortcuts
+
+vim.keymap.set('n', '<leader>cf', ':lua require("conform").format()<CR>', {
+    noremap = true,
+    silent = true
+})
+
 -- Debug Shortcuts - DAP
 
 vim.keymap.set('n', '<F5>', ':lua require("dap").continue()<CR>', {
@@ -109,3 +116,10 @@ vim.keymap.set('n', '<leader>lp', ':lua require("dap").set_breakpoint(nil, nil, 
 vim.keymap.set('n', '<leader>dr', ':lua require("dap").repl.open()<CR>', {
     silent = true
 })
+
+-- Tmux Navigator Shortcuts
+
+vim.keymap.set('n', 'C-h', ':TmuxNavigateLeft<CR>')
+vim.keymap.set('n', 'C-k', ':TmuxNavigateDown<CR>')
+vim.keymap.set('n', 'C-j', ':TmuxNavigateUp<CR>')
+vim.keymap.set('n', 'C-l', ':TmuxNavigateRight<CR>')

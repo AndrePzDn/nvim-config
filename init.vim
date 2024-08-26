@@ -17,7 +17,7 @@ syntax enable
 
 so $HOME/.config/nvim/plugs.vim
 so $HOME/.config/nvim/mappings.lua
-so $HOME/.config/nvim/plug-config/airline.vim
+so $HOME/.config/nvim/plug-config/airline.lua
 so $HOME/.config/nvim/plug-config/auto-comment.vim
 so $HOME/.config/nvim/plug-config/cmp.lua
 so $HOME/.config/nvim/plug-config/colorizer.lua

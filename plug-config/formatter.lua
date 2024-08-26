@@ -8,7 +8,3 @@ conform.setup({
         go = { { "gofmt" } },
     },
 })
-
-vim.keymap.set('n', '<leader>cf', ':lua require("conform").format()<CR>',
-    { noremap = true, silent = true }
-)
