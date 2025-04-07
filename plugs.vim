@@ -9,6 +9,10 @@ Plug 'akinsho/toggleterm.nvim' , {'tag': '*'} " TogleTerm Plugin
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 
+    " File Explorer
+Plug 'stevearc/oil.nvim'
+
+
     " Telescopre Plugins
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim' , { 'tag': '0.1.5' }
@@ -64,7 +68,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+" Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 
     " Debugging
 Plug 'mfussenegger/nvim-dap'
@@ -106,11 +110,16 @@ Plug 'Shougo/deoplete.nvim'
 
     " Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    " Markdown Render
+Plug 'MeanderingProgrammer/render-markdown.nvim'
 
 " HTML Plugins
 
     " Auto Close Tags
 Plug 'windwp/nvim-ts-autotag'
 
+" Testing
+Plug 'kndndrj/nvim-dbee'  
+Plug 'MunifTanjim/nui.nvim'  
 
 call plug#end()

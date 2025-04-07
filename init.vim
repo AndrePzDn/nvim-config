@@ -1,8 +1,8 @@
 set number
-" set rnu
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set rnu
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set showcmd
 set encoding=utf-8
@@ -21,6 +21,7 @@ so $HOME/.config/nvim/plug-config/airline.lua
 so $HOME/.config/nvim/plug-config/auto-comment.vim
 so $HOME/.config/nvim/plug-config/cmp.lua
 so $HOME/.config/nvim/plug-config/colorizer.lua
+so $HOME/.config/nvim/plug-config/database-viewer.lua
 so $HOME/.config/nvim/plug-config/devicons.lua
 so $HOME/.config/nvim/plug-config/debugger.lua
 so $HOME/.config/nvim/plug-config/formatter.lua
@@ -41,6 +42,8 @@ so $HOME/.config/nvim/plug-config/treesitter.lua
 " colorscheme onedark_vivid
 " colorscheme gruvbox
 colorscheme catppuccin-macchiato
+
+filetype plugin on
 
 " hi CursorLine guibg=#272C31 guifg=NONE
 hi StartifyHeader guifg=#C678DD

@@ -13,9 +13,9 @@ vim.keymap.set('n', '<Right>', '<Nop>', { noremap = true })
 
 -- Shortcuts as Visual Studio Code
 
-vim.keymap.set('n', '<C-s>', ':w<CR>', {})
-vim.keymap.set('i', '<C-s>', '<Esc><C-s>', {})
-vim.keymap.set('v', '<C-s>', '<Esc><C-s>', {})
+vim.keymap.set('n', '<C-s>', ':w<CR>', { silent = true })
+vim.keymap.set('i', '<C-s>', '<Esc><C-s>', { silent = true })
+vim.keymap.set('v', '<C-s>', '<Esc><C-s>', { silent = true })
 
 vim.keymap.set('n', '<C-z>', 'u', {})
 vim.keymap.set('i', '<C-z>', '<Esc><C-z>', {})
@@ -37,6 +37,16 @@ vim.keymap.set('n', '<C-b>', ':Telescope file_browser<CR><Esc>', {})
 vim.keymap.set('i', '<C-b>', '<Esc><C-b>', {})
 vim.keymap.set('v', '<C-b>', '<Esc><C-b>', {})
 
+vim.keymap.set('n', '<C-M-b>', ':Oil --float --preview<CR>', {
+  silent = true
+})
+vim.keymap.set('i', '<C-M-b>', '<Esc><C-M-b>', {
+  silent = true
+})
+vim.keymap.set('v', '<C-M-b>', '<Esc><C-M-b>', {
+  silent = true
+})
+
 -- Tmux mappings
 
 vim.keymap.set('n', '<C-h>', ':wincmd h<CR>', {})
@@ -47,16 +57,16 @@ vim.keymap.set('n', '<C-l>', ':wincmd l<CR>', {})
 -- Auto comment shortcut
 
 vim.keymap.set('n', '<C-/>', ':AutoInlineComment<CR>', {
-    noremap = true,
-    silent = true
+  noremap = true,
+  silent = true
 })
 vim.keymap.set('i', '<C-/>', '<Esc>:AutoInlineComment<CR>', {
-    noremap = true,
-    silent = true
+  noremap = true,
+  silent = true
 })
 vim.keymap.set('v', '<C-/>', ':AutoInlineComment<CR>', {
-    noremap = true,
-    silent = true
+  noremap = true,
+  silent = true
 })
 
 -- Competitive Programming Shortcuts
@@ -69,8 +79,8 @@ vim.keymap.set('n', '<C-M-k>', ':CompetiTest add_testcase<CR>', {})
 vim.keymap.set('n', '<leader>dc', ':Copilot disable<CR>', { silent = true })
 vim.keymap.set('n', '<leader>ec', ':Copilot enable<CR>', { silent = true })
 vim.keymap.set('i', '<C-k>', 'copilot#Accept("\\<CR>")', {
-    expr = true,
-    replace_keycodes = false
+  expr = true,
+  replace_keycodes = false
 })
 
 vim.g.copilot_no_tab_map = true
@@ -85,36 +95,37 @@ vim.keymap.set('n', '<leader>r', ':LspRestart<CR>', { noremap = true })
 
 -- Formatting Shortcuts
 
-vim.keymap.set('n', '<leader>cf', ':lua require("conform").format()<CR>', {
-    noremap = true,
-    silent = true
+vim.keymap.set('n', '<leader>cf', ':lua require("conform").formate()<CR>', {
+  noremap = true,
+  silent = true
 })
 
 -- Debug Shortcuts - DAP
 
 vim.keymap.set('n', '<F5>', ':lua require("dap").continue()<CR>', {
-    silent = true
+  silent = true
 })
 vim.keymap.set('n', '<F10>', ':lua require("dap").step_over()<CR>', {
-    silent = true
+  silent = true
 })
 vim.keymap.set('n', '<F11>', ':lua require("dap").step_into()<CR>', {
-    silent = true
+  silent = true
 })
 vim.keymap.set('n', '<F12>', ':lua require("dap").step_out()<CR>', {
-    silent = true
+  silent = true
 })
 vim.keymap.set('n', '<leader>b', ':lua require("dap").toggle_breakpoint()<CR>', {
-    silent = true
+  silent = true
 })
 vim.keymap.set('n', '<leader>B', ':lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', {
-    silent = true
+  silent = true
 })
-vim.keymap.set('n', '<leader>lp', ':lua require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>', {
+vim.keymap.set('n', '<leader>lp', ':lua require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>',
+  {
     silent = true
-})
+  })
 vim.keymap.set('n', '<leader>dr', ':lua require("dap").repl.open()<CR>', {
-    silent = true
+  silent = true
 })
 
 -- Tmux Navigator Shortcuts
