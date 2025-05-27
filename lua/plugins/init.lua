@@ -1,6 +1,6 @@
 return {
 	-- General
-	{ "jiangmiao/auto-pairs", lazy = true, event = "InsertEnter" },
+	-- { "jiangmiao/auto-pairs", lazy = true, event = "InsertEnter" },
 
 	-- Themes
 	{ "morhetz/gruvbox", lazy = true, event = "VeryLazy" },

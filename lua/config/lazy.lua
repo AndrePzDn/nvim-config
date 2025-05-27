@@ -44,6 +44,7 @@ require("lazy").setup({
 		{ import = "plugins.telescope" },
 		{ import = "plugins.transparent" },
 		{ import = "plugins.treesitter" },
+		{ import = "plugins.trouble" },
 		{ import = "plugins.toggleterm" },
 		{ import = "plugins.oil" },
 		{ import = "plugins" },

@@ -10,9 +10,20 @@ map("n", "<Down>", "<Nop>", opts)
 map("n", "<Left>", "<Nop>", opts)
 map("n", "<Right>", "<Nop>", opts)
 
+-- map("n", "<C-d>", "<C-d>zz", opts)
+-- map("n", "<C-u>", "<C-u>zz", opts)
+
+map("i", "<C-c>", "<Esc>", opts)
+map("n", "<C-d>", "10jzz", opts)
+map("n", "<C-u>", "10kzz", opts)
+
+-- Lazy
+
+map("n", "<leader>l", ":Lazy<CR>", opts)
+
 -- Shortcuts as Visual Studio Code
 
-map("n", "<C-s>", ":w<CR>", opts)
+map("n", "<C-s>", ":lua SaveFile()<CR>", opts)
 map("i", "<C-s>", "<Esc><C-s>", opts)
 map("v", "<C-s>", "<Esc><C-s>", opts)
 
@@ -87,3 +98,23 @@ map("n", "C-h", ":TmuxNavigateLeft<CR>", opts)
 map("n", "C-k", ":TmuxNavigateDown<CR>", opts)
 map("n", "C-j", ":TmuxNavigateUp<CR>", opts)
 map("n", "C-l", ":TmuxNavigateRight<CR>", opts)
+
+---- Functions -----
+
+function SaveFile()
+	if vim.fn.empty(vim.fn.expand("%:t")) == 1 then
+		vim.notify("No file to save", vim.log.levels.WARN)
+		return
+	end
+
+	local filename = vim.fn.expand("%:t")
+	local success, err = pcall(function()
+		vim.cmd("silent! write")
+	end)
+
+	if success then
+		vim.notify(filename .. " Saved!")
+	else
+		vim.notify("Error: " .. err, vim.log.levels.ERROR)
+	end
+end

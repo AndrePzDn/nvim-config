@@ -5,21 +5,21 @@ local colors = {
 	white = "#cad3f5",
 	red = "#ed8796",
 	violet = "#c6a0f6",
-	grey = "#303030",
+	gray = "#303030",
 	green = "#a6da95",
 }
 
 local bubbles_theme = {
 	normal = {
-		a = { fg = colors.green, bg = colors.grey, gui = "bold" },
-		b = { fg = colors.white, bg = colors.grey },
+		a = { fg = colors.green, bg = colors.gray, gui = "bold" },
+		b = { fg = colors.white, bg = colors.gray },
 		c = { fg = colors.white },
-		z = { fg = colors.white, bg = colors.grey },
+		z = { fg = colors.white, bg = colors.gray },
 	},
 
-	insert = { a = { fg = colors.black, bg = colors.blue } },
-	visual = { a = { fg = colors.black, bg = colors.violet } },
-	replace = { a = { fg = colors.black, bg = colors.red } },
+	insert = { a = { fg = colors.blue, bg = colors.gray, gui = "bold" } },
+	visual = { a = { fg = colors.violet, bg = colors.gray, gui = "bold" } },
+	replace = { a = { fg = colors.red, bg = colors.gray, gui = "bold" } },
 
 	inactive = {
 		a = { fg = colors.white, bg = colors.black },
@@ -53,6 +53,7 @@ return {
 			},
 			inactive_sections = {
 				lualine_a = { "filename", "diagnostics" },
+				lualine_c = {},
 				lualine_x = { "filetype" },
 				lualine_z = { "location" },
 			},

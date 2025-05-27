@@ -11,7 +11,7 @@ return {
 				typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 				csharp = { "csharpier", stop_after_first = true },
 				go = { "gofmt", stop_after_first = true },
-				python = { "isort", stop_after_first = true },
+				python = { "autoflake", stop_after_first = true },
 				lua = { "stylua", stop_after_first = true },
 				luau = { "stylua", stop_after_first = true },
 			},
