@@ -10,9 +10,6 @@ return {
 		priority = 1000,
 		lazy = true,
 		event = "VeryLazy",
-		--[[ config = function()
-      vim.cmd.colorscheme("catppuccin-macchiato")
-    end, ]]
 	},
 
 	-- Competitive programming
@@ -29,16 +26,11 @@ return {
 	-- Mason
 	-- { "williamboman/mason-lspconfig.nvim" },
 
-	-- Debugging
-	--[[ { "mfussenegger/nvim-dap" },
-  { "nvim-neotest/nvim-nio" },
-  { "rcarriga/nvim-dap-ui" }, ]]
-
 	-- FZF
 	{ "vijaymarupudi/nvim-fzf", lazy = true, event = "VeryLazy" },
 
 	-- Copilot
-	{ "github/copilot.vim", lazy = true, event = "InsertEnter" },
+	-- { "github/copilot.vim", lazy = true, event = "InsertEnter" },
 
 	-- Tmux navigation
 	{ "christoomey/vim-tmux-navigator", lazy = true, event = "VeryLazy" },
@@ -53,5 +45,8 @@ return {
 	{ "windwp/nvim-ts-autotag", lazy = true, event = "VeryLazy" },
 
 	-- DB testing
-	{ "kndndrj/nvim-dbee", lazy = true, event = "VeryLazy" },
+	{ "tpope/vim-dadbod", lazy = true, event = "VeryLazy" },
+	{ "kristijanhusak/vim-dadbod-ui", lazy = true, event = "VeryLazy" },
+	{ "kristijanhusak/vim-dadbod-completion", lazy = true, event = "VeryLazy" },
+	-- { "kndndrj/nvim-dbee", lazy = true, event = "VeryLazy" },
 }

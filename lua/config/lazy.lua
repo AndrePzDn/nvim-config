@@ -30,7 +30,6 @@ require("lazy").setup({
 		-- import your plugins
 		{ import = "plugins.colorizer" },
 		{ import = "plugins.comment" },
-		{ import = "plugins.cmp" },
 		{ import = "plugins.formatter" },
 		{ import = "plugins.hlchunk" },
 		{ import = "plugins.nvim-dev-icons" },

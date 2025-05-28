@@ -10,9 +10,6 @@ map("n", "<Down>", "<Nop>", opts)
 map("n", "<Left>", "<Nop>", opts)
 map("n", "<Right>", "<Nop>", opts)
 
--- map("n", "<C-d>", "<C-d>zz", opts)
--- map("n", "<C-u>", "<C-u>zz", opts)
-
 map("i", "<C-c>", "<Esc>", opts)
 map("n", "<C-d>", "10jzz", opts)
 map("n", "<C-u>", "10kzz", opts)
@@ -69,17 +66,6 @@ map("v", "<C-/>", ":AutoInlineComment<CR>", opts)
 -- map("n", "<C-M-l>", ":CompetiTest run<CR>", {})
 -- map("n", "<C-M-k>", ":CompetiTest add_testcase<CR>", {})
 
--- GitHub Copilot Shortcuts
-
-map("n", "<leader>dc", ":Copilot disable<CR>", opts)
-map("n", "<leader>ec", ":Copilot enable<CR>", opts)
-map("i", "<C-k>", 'copilot#Accept("\\<CR>")', {
-	expr = true,
-	replace_keycodes = false,
-})
-
-vim.g.copilot_no_tab_map = true
-
 -- Git Shortcuts
 
 map("n", "<leader>gg", ":Telescope git_status<CR><Esc>", opts)
@@ -90,7 +76,9 @@ map("n", "<leader>r", ":LspRestart<CR>", opts)
 
 -- Formatting Shortcuts
 
-map("n", "<leader>cf", ':lua require("conform").format()<CR>', opts)
+map("n", "<M-S-f>", function()
+	require("conform").format()
+end, opts)
 
 -- Tmux Navigator Shortcuts
 
