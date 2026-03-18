@@ -28,6 +28,7 @@ require("options")
 require("lazy").setup({
 	spec = {
 		-- import your plugins
+		{ import = "plugins.3rdimage" },
 		{ import = "plugins.colorizer" },
 		{ import = "plugins.comment" },
 		{ import = "plugins.formatter" },
@@ -50,12 +51,14 @@ require("lazy").setup({
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	install = { colorscheme = { "catpuccin-macchiato" } },
+	-- install = { colorscheme = { "catpuccin-macchiato" } },
+	install = { colorscheme = { "kanagawa-dragon" } },
 	-- automatically check for plugin updates
 	checker = {
 		enabled = true,
-		notify = true,
+		notify = false,
 	},
 })
 
-vim.cmd.colorscheme("catppuccin-macchiato")
+-- vim.cmd.colorscheme("catppuccin-macchiato")
+vim.cmd.colorscheme("kanagawa-dragon")

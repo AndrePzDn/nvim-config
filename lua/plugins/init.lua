@@ -1,16 +1,65 @@
 return {
-	-- General
-	-- { "jiangmiao/auto-pairs", lazy = true, event = "InsertEnter" },
-
 	-- Themes
 	{ "morhetz/gruvbox", lazy = true, event = "VeryLazy" },
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		priority = 1000,
 		lazy = true,
 		event = "VeryLazy",
 	},
+	{
+		"rebelot/kanagawa.nvim",
+		priority = 1000,
+		lazy = true,
+		config = function()
+			require("kanagawa").setup({
+				compile = false, -- enable compiling the colorscheme
+				undercurl = true, -- enable undercurls
+				commentStyle = { italic = true },
+				functionStyle = {},
+				keywordStyle = { italic = true },
+				statementStyle = { bold = true },
+				typeStyle = {},
+				transparent = true, -- do not set background color
+				dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+				terminalColors = true, -- define vim.g.terminal_color_{0,17}
+				colors = { -- add/modify theme and palette colors
+					palette = {},
+					theme = {
+						wave = {},
+						lotus = {},
+						dragon = {},
+						all = {
+							ui = {
+								bg_gutter = "none", -- set bg color for normal background
+								bg_sidebar = "none", -- set bg color for sidebar like nvim-tree
+								bg_float = "none", -- set bg color for floating windows
+							},
+						},
+					},
+				},
+				overrides = function(colors) -- add/modify highlights
+					return {
+						LineNr = { bg = "none" },
+						NormalFloat = { bg = "none" },
+						FloatBorder = { bg = "none" },
+						FloatTitle = { bg = "none" },
+						TelescopeNormal = { bg = "none" },
+						TelescopeBorder = { bg = "none" },
+						LspInfoBorder = { bg = "none" },
+					}
+				end,
+				theme = "wave", -- Load "wave" theme
+				background = { -- map the value of 'background' option to a theme
+					dark = "wave", -- try "dragon" !
+					light = "lotus",
+				},
+			})
+		end,
+	},
+
+	-- Buffer Optimization
+	{ "echasnovski/mini.bufremove", version = "*" },
 
 	-- Competitive programming
 	-- { "MunifTanjim/nui.nvim" },
@@ -23,30 +72,18 @@ return {
 	{ "L3MON4D3/LuaSnip", lazy = true, event = "InsertEnter" },
 	{ "rafamadriz/friendly-snippets", lazy = true, event = "InsertEnter" },
 
-	-- Mason
-	-- { "williamboman/mason-lspconfig.nvim" },
-
 	-- FZF
 	{ "vijaymarupudi/nvim-fzf", lazy = true, event = "VeryLazy" },
-
-	-- Copilot
-	-- { "github/copilot.vim", lazy = true, event = "InsertEnter" },
 
 	-- Tmux navigation
 	{ "christoomey/vim-tmux-navigator", lazy = true, event = "VeryLazy" },
 
 	-- Dotnet
-	{ "Hoffs/omnisharp-extended-lsp.nvim", lazy = true, event = "VeryLazy" },
-	{ "markwoodhall/vim-nuget", lazy = true, event = "VeryLazy" },
-	{ "mattn/webapi-vim", lazy = true, event = "VeryLazy" },
-	{ "Shougo/deoplete.nvim", lazy = true, event = "InsertEnter" },
-
-	-- HTML / Tags
-	{ "windwp/nvim-ts-autotag", lazy = true, event = "VeryLazy" },
+	-- { "Hoffs/omnisharp-extended-lsp.nvim", lazy = true, event = "VeryLazy" },
 
 	-- DB testing
 	{ "tpope/vim-dadbod", lazy = true, event = "VeryLazy" },
 	{ "kristijanhusak/vim-dadbod-ui", lazy = true, event = "VeryLazy" },
 	{ "kristijanhusak/vim-dadbod-completion", lazy = true, event = "VeryLazy" },
-	-- { "kndndrj/nvim-dbee", lazy = true, event = "VeryLazy" },
+	{ "karb94/neoscroll.nvim", opts = {} },
 }

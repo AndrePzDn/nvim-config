@@ -2,7 +2,8 @@ return {
 	{
 		"saghen/blink.cmp",
 		version = "v0.*",
-		lazy = false,
+		lazy = true,
+		event = "InsertEnter",
 		dependencies = { "rafamadriz/friendly-snippets", "L3MON4D3/LuaSnip" },
 		opts = {
 			sources = {
@@ -98,6 +99,8 @@ return {
 	},
 	{
 		"giuxtaposition/blink-cmp-copilot",
+		lazy = true,
+		event = "InsertEnter",
 	},
 	{
 		"zbirenbaum/copilot.lua",

@@ -1,6 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
+	event = "BufReadPre",
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			sync_install = false,

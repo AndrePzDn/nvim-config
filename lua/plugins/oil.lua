@@ -111,7 +111,7 @@ return {
 				max_height = 0.8,
 				border = "rounded",
 				win_options = {
-					winblend = 0,
+					winblend = 20,
 				},
 				-- optionally override the oil buffers window title with custom function: fun(winid: integer): string
 				get_win_title = nil,
@@ -127,7 +127,8 @@ return {
 				-- Whether the preview window is automatically updated when the cursor is moved
 				update_on_cursor_moved = true,
 				-- How to open the preview window "load"|"scratch"|"fast_scratch"
-				preview_method = "fast_scratch",
+				-- preview_method = "fast_scratch",
+				preview_method = "load",
 				-- A function that returns true to disable preview on a file e.g. to avoid lag
 				disable_preview = function(filename)
 					return false

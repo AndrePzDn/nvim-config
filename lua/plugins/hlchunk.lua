@@ -19,6 +19,13 @@ return {
 		indent = {
 			use_treesitter = true,
 			enable = true,
+			exclude_filetypes = { "oil" }, -- oil still excluded
+			-- automatically disable for filetypes without a valid Treesitter parser
+			should_render = function(bufnr)
+				local ft = vim.api.nvim_buf_get_option(bufnr, "filetype")
+				local ok, _ = pcall(vim.treesitter.get_parser, bufnr, ft)
+				return ok
+			end,
 		},
 		line_num = {
 			enable = true,
@@ -28,9 +35,7 @@ return {
 		},
 		blank = {
 			enable = true,
-			chars = {
-				".",
-			},
+			chars = { "." },
 			style = {
 				{ vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID("Whitespace")), "fg", "gui"), "" },
 			},

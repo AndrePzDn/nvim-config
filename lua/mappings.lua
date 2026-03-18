@@ -11,8 +11,11 @@ map("n", "<Left>", "<Nop>", opts)
 map("n", "<Right>", "<Nop>", opts)
 
 map("i", "<C-c>", "<Esc>", opts)
+
 map("n", "<C-d>", "10jzz", opts)
 map("n", "<C-u>", "10kzz", opts)
+map("v", "<C-u>", "10kzz", opts)
+map("v", "<C-d>", "10jzz", opts)
 
 -- Lazy
 
@@ -57,9 +60,8 @@ map("n", "<C-l>", ":wincmd l<CR>", opts)
 
 -- Auto comment shortcut
 
-map("n", "<C-/>", ":AutoInlineComment<CR>", opts)
-map("i", "<C-/>", "<Esc>:AutoInlineComment<CR>", opts)
-map("v", "<C-/>", ":AutoInlineComment<CR>", opts)
+map("n", "<C-/>", "V<gc>", opts)
+map("i", "<C-/>", "<Esc><C-/>", opts)
 
 -- Competitive Programming Shortcuts
 

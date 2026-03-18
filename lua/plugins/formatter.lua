@@ -8,6 +8,7 @@ return {
 				markdown = { "prettierd", "prettier", stop_after_first = true },
 				html = { "prettierd", "prettier", stop_after_first = true },
 				javascript = { "prettierd", "prettier", stop_after_first = true },
+				javascriptreact = { "prettierd", "prettier", stop_after_first = true },
 				typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 				csharp = { "csharpier", stop_after_first = true },
 				go = { "gofmt", stop_after_first = true },
